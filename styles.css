@@ -13,10 +13,10 @@
     padding-right: 72%;
 }
 #creditCardInfo {
-    width: 93%;
+    width: 95%;
     border-radius: 5px;
     border: solid rgb(224, 217, 217);
-    height: 50%;
+    height: 47%;
 }
 #firstNameInfo {
     border-radius: 5px;
@@ -42,15 +42,16 @@
 #messageBox {
     border-radius: 5px;
     border: solid rgb(224, 217, 217);
-    width: 100%;
+    width: fit-content;
+
 }
 
 #messageLabel {
     padding-right: 90%;
 }
-#messageNotes {
-    padding-right: 70%;
-}
+/* #messageNotes {
+    padding-right: 59%;
+} */
 /* #submitButton {
     padding-left: 85%;
 } */
