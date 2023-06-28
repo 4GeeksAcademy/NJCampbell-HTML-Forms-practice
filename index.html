@@ -15,6 +15,9 @@
         </div>
         <form id="payment-info" onsubmit="validate()">
             <div class="card-body">
+              <div class="alert alert-danger" role="alert">
+                Some fields are missing
+              </div>
             <!-- user input -->
             <fieldset id="credit-card-info">
                 <div class="row"></div>
@@ -119,10 +122,11 @@
                 <div class="col-6">
                     <div class="mb-3 text-start">
                 <fieldset id="user-message">
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
-                        <label for="floatingTextarea2">Message</label>
-                      </div>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Message</label>
+                  </div>
+                   
                 </fieldset>
                     </div>
             </div>
