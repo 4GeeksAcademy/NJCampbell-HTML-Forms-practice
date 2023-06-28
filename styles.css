@@ -1,7 +1,66 @@
+
+
 .card {
     margin: 50px 200px 50px 200px;
 }
-
+.card-body {
+    margin-right: 2%;
+}
 .alert {
+    text-align: left;
+}
+#amountLabel {
+    padding-right: 75%;
+}
+#creditCardInfo {
+    width: 93%;
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+    height: 50%;
+}
+#firstNameInfo {
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+}
+#lastNameInfo {
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+    margin-right: 5px;
+}
+#mailingCity {
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+}
+#mailingState {
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+}
+#mailingZip {
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+}
+#messageBox {
+    border-radius: 5px;
+    border: solid rgb(224, 217, 217);
+}
+#messageLabel {
+    padding-right: 90%;
+}
+#messageNotes {
+    padding-right: 70%;
+}
+#submitButton {
+    padding-left: 85%;
+}
+#submitButton1 {
+    width: 100%;
+    margin-left: 0px;
+}
+
+.cardType {
+    width: 55%;
+    border-radius: 5px;
+  }
+#messageLabel {
     text-align: left;
 }

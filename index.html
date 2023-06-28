@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <title>Bootstrap demo</title>
+    <title>HTML Payment Form</title>
     <script src="https://kit.fontawesome.com/2360758ebf.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   </head>
@@ -15,7 +15,7 @@
         </div>
         <form id="payment-info" onsubmit="validate()">
             <div class="card-body">
-              <div class="alert alert-danger" role="alert">
+              <div class="alert alert-danger fw-medium" role="alert">
                 Some fields are missing
               </div>
             <!-- user input -->
@@ -24,24 +24,24 @@
                 <div class="row">
                     <div class="col-5">
                         <div class="mb-3 text-start">
-                            <label for="creditCardInfo" class="form-label">Card #</label>
+                            <label for="creditCardInfo" class="form-label fw-medium">Card #</label>
                             <input type="text" class="form-control" id="creditCardInfo" placeholder="XXXXXXXXXXXXXXX">
                           </div>
 
                     </div>
                     <div class="col-3">
                         <div class="mb-3 text-start">
-                            <label for="creditCardInfo" class="form-label">CVC #</label>
-                            <input type="text" class="form-control" id="creditCardInfo" placeholder="000">
+                            <label for="creditCardInfo" class="form-label fw-medium">CVC #</label>
+                            <input type="number" class="form-control" id="creditCardInfo" placeholder="000" required>
                           </div>
 
                     </div>
                     <div class="col-4">
-                        <div class="mb-3 text-start">
-                            <label for="creditCardInfo" class="form-label">Amount</label>
-                            <input type="text" class="form-control" id="creditCardInfo" placeholder="Amount">
-                          </div>
-
+                      <label for="amountTotal" class="form-label fw-medium" id="amountLabel">Amount</label><br />
+                      <span class="">
+                        <sup> $</sup>
+                        <input type="number" name="amount" id="creditCardInfo" placeholder="Amount" required/>
+                      </span>
                     </div>
                 </div>
             </fieldset>
@@ -49,14 +49,14 @@
                 <div class="row">
                     <div class="col-6">
                 <div class="mb-3 text-start">
-                    <label for="nameInfo" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="nameInfo" placeholder="">
+                    <label for="nameInfo" class="form-label fw-medium">First Name</label>
+                    <input type="text" class="form-control" id="firstNameInfo" placeholder="" required>
                   </div>
                     </div>
                     <div class="col-6">
                   <div class="mb-3 text-start">
-                    <label for="nameInfo" class="form-label">Last Name</label>
-                    <input type="text" class="form-control" id="nameInfo" placeholder="">
+                    <label for="nameInfo" class="form-label fw-medium">Last Name</label>
+                    <input type="text" class="form-control" id="lastNameInfo" placeholder="" required>
                   </div>
                     </div>
                 </div>  
@@ -67,14 +67,14 @@
                 <div class="row">
                     <div class="col-5">
                 <div class="mb-3 text-start">
-                    <label for="mailingInfo" class="form-label">City</label>
-                    <input type="text" class="form-control" id="mailingInfo" placeholder="">
+                    <label for="mailingInfo" class="form-label fw-medium">City</label>
+                    <input type="text" class="form-control" id="mailingCity" placeholder="" required>
                   </div>
                     </div>
                     <div class="col-4">
                   <div class="mb-3 text-start">
-                    <label for="mailingInfo" class="form-label">State</label>
-                    <select class="form-select" aria-label="Default select example">
+                    <label for="mailingInfo" class="form-label fw-medium">State</label>
+                    <select class="form-select" aria-label="Default select example" id="mailingState" required>
                         <option selected>Pick a State</option>
                         <option value="1">California</option>
                         <option value="2">Florida</option>
@@ -85,8 +85,8 @@
                     </div>
                     <div class="col-3">
                         <div class="mb-3 text-start">
-                            <label for="mailingInfo" class="form-label">Postal Code</label>
-                            <input type="text" class="form-control" id="mailingInfo" placeholder="">
+                            <label for="mailingInfo" class="form-label fw-medium">Postal Code</label>
+                            <input type="text" class="form-control" id="mailingZip" placeholder="" required>
                           </div>
                     </div>
                 </div> 
@@ -97,18 +97,29 @@
                     <div class="mb-3 text-start">
                         <div id="credit-card-radio">
                             <!-- <legend>We Accept:</legend> -->
+                            <p class="fw-medium">We Accept:</p>
                             <fieldset id="credit-card-radio">
-                                <div>
-                                  <input type="radio" id="contactChoice1" name="contact" value="email" />
+                                <div class="cardType bg-secondary-subtle p-2">
+                                  <div class="row">
+                                  <div class="col">
+                                    <input type="radio" id="contactChoice1" name="contact" value="email" />
                                   <label for="contactChoice1"><i class="fa-brands fa-cc-mastercard"></i></label>
-                            
-                                  <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                                  </div>
+                                  <div class="col">
+                                    <input type="radio" id="contactChoice2" name="contact" value="phone" />
                                   <label for="contactChoice2"><i class="fa-brands fa-cc-visa"></i></label>
-                            
+                                  </div>
+                                  <div class="col">                                    
                                   <input type="radio" id="contactChoice3" name="contact" value="mail" />
                                   <label for="contactChoice3"><i class="fa-brands fa-cc-diners-club"></i></label>
-                                  <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                                  <label for="contactChoice3"><i class="fa-regular fa-credit-card"></i></label>
+                                  </div>
+                                  <div class="col"> <input type="radio" id="contactChoice4" name="contact" value="mail" />
+                                    <label for="contactChoice3"><i class="fa-regular fa-credit-card"></i></label>
+                                  </div>
+                                  </div>
+                                  
+                            
+                                 
                                 </div>
                                 
                              </fieldset>
@@ -120,15 +131,13 @@
             
                 </div>
                 <div class="col-6">
-                    <div class="mb-3 text-start">
-                <fieldset id="user-message">
-                  <div class="form-floating">
-                    <textarea class="form-control" placeholder="" id="floatingTextarea2" style="height: 100px"></textarea>
-                    <label for="floatingTextarea2">Message</label>
-                  </div>
-                   
-                </fieldset>
-                    </div>
+                    <div class="mb-3">
+                      <label class="mb-1 fw-medium" id="messageLabel">Message:</label><br/>
+                      <textarea name="message" id="messageBox" rows="7" cols="81"></textarea>
+                      <span class="fw-medium fs-6" id="messageNotes">Add any notes here.</span>
+                    </div>  
+                
+                </div>
             </div>
 
             
@@ -139,12 +148,17 @@
             
             
             </div>
-            <div class="card-footer text-body-secondary">
-                <!-- submit/cancel button -->
-                <button type="button" class="btn-secondary">Cancel</button>
-                <input class="btn btn-primary" type="submit" value="Submit">
-            </div>
+            <!-- end card body -->
+            
+           
         </form>
+        <div class="row" id="submitButton1">
+          <div class="card-footer" id="submitButton">
+            <!-- submit/cancel button -->
+            <button type="button" class="btn btn-secondary">Cancel</button>
+            <input class="btn btn-primary me-2" type="submit" value="Send">
+        </div>
+        </div>
       </div>
 
         
