@@ -3,14 +3,14 @@
 .card {
     margin: 50px 200px 50px 200px;
 }
-.card-body {
+/* .card-body {
     margin-right: 2%;
-}
+} */
 .alert {
     text-align: left;
 }
 #amountLabel {
-    padding-right: 75%;
+    padding-right: 72%;
 }
 #creditCardInfo {
     width: 93%;
@@ -42,20 +42,22 @@
 #messageBox {
     border-radius: 5px;
     border: solid rgb(224, 217, 217);
+    width: 100%;
 }
+
 #messageLabel {
     padding-right: 90%;
 }
 #messageNotes {
     padding-right: 70%;
 }
-#submitButton {
+/* #submitButton {
     padding-left: 85%;
-}
-#submitButton1 {
+} */
+/* #submitButton1 {
     width: 100%;
     margin-left: 0px;
-}
+} */
 
 .cardType {
     width: 55%;

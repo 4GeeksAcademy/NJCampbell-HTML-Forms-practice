@@ -20,7 +20,7 @@
               </div>
             <!-- user input -->
             <fieldset id="credit-card-info">
-                <div class="row"></div>
+                
                 <div class="row">
                     <div class="col-5">
                         <div class="mb-3 text-start">
@@ -37,13 +37,15 @@
 
                     </div>
                     <div class="col-4">
+                      <!-- <div class="mb-3 text-start"> -->
                       <label for="amountTotal" class="form-label fw-medium" id="amountLabel">Amount</label><br />
                       <span class="">
                         <sup> $</sup>
                         <input type="number" name="amount" id="creditCardInfo" placeholder="Amount" required/>
                       </span>
+                      </div>
                     </div>
-                </div>
+                <!-- here removed div card/body-->
             </fieldset>
                 <fieldset id="first-last-name">
                 <div class="row">
@@ -91,55 +93,68 @@
                     </div>
                 </div> 
             </fieldset>
-            
-            <div class="row">
-                <div class="col-5">
-                    <div class="mb-3 text-start">
-                        <div id="credit-card-radio">
-                            <!-- <legend>We Accept:</legend> -->
-                            <p class="fw-medium">We Accept:</p>
-                            <fieldset id="credit-card-radio">
-                                <div class="cardType bg-secondary-subtle p-2">
-                                  <div class="row">
-                                  <div class="col">
-                                    <input type="radio" id="contactChoice1" name="contact" value="email" />
-                                  <label for="contactChoice1"><i class="fa-brands fa-cc-mastercard"></i></label>
-                                  </div>
-                                  <div class="col">
-                                    <input type="radio" id="contactChoice2" name="contact" value="phone" />
-                                  <label for="contactChoice2"><i class="fa-brands fa-cc-visa"></i></label>
-                                  </div>
-                                  <div class="col">                                    
-                                  <input type="radio" id="contactChoice3" name="contact" value="mail" />
-                                  <label for="contactChoice3"><i class="fa-brands fa-cc-diners-club"></i></label>
-                                  </div>
-                                  <div class="col"> <input type="radio" id="contactChoice4" name="contact" value="mail" />
-                                    <label for="contactChoice3"><i class="fa-regular fa-credit-card"></i></label>
-                                  </div>
-                                  </div>
-                                  
-                            
-                                 
+            <!-- radio and message box -->
+            <div class="row" id="cardMessage">
+              <div class="col-5">
+                  <div class="mb-3 text-start">
+                      <div id="credit-card-radio">
+                          <!-- <legend>We Accept:</legend> -->
+                          <p class="fw-medium">We Accept:</p>
+                          <fieldset id="credit-card-radio">
+                              <div class="cardType bg-secondary-subtle p-2">
+                                <div class="row">
+                                <div class="col">
+                                  <input type="radio" id="contactChoice1" name="contact" value="email" />
+                                <label for="contactChoice1"><i class="fa-brands fa-cc-mastercard"></i></label>
+                                </div>
+                                <div class="col">
+                                  <input type="radio" id="contactChoice2" name="contact" value="phone" />
+                                <label for="contactChoice2"><i class="fa-brands fa-cc-visa"></i></label>
+                                </div>
+                                <div class="col">                                    
+                                <input type="radio" id="contactChoice3" name="contact" value="mail" />
+                                <label for="contactChoice3"><i class="fa-brands fa-cc-diners-club"></i></label>
+                                </div>
+                                <div class="col"> <input type="radio" id="contactChoice4" name="contact" value="mail" />
+                                  <label for="contactChoice3"><i class="fa-regular fa-credit-card"></i></label>
+                                </div>
                                 </div>
                                 
-                             </fieldset>
-                            
-                        </div>
+                          
+                               
+                              </div>
+                              
+                           </fieldset>
+                          
+                      </div>
+              
+                  </div>    
+              
+          
+              </div>
+              
+                <div class="col-5" id="messageContainer">
+                  <div class="mb-3">
+                    <label class="fw-medium" id="messageLabel">Message:</label><br/>
+                    <textarea name="message" id="messageBox"></textarea>
+                    <span class="fw-medium fs-6" id="messageNotes">Add any notes here.</span>
+                  </div>
+                </div>
                 
-                    </div>    
-                
+              
+              
+          </div>
+          <div class="row" id="submitButton1">
+            <div class="card-footer" id="submitButton">
+              <!-- submit/cancel button -->
+              <button type="button" class="btn btn-secondary">Cancel</button>
+              <input class="btn btn-primary me-2" type="submit" value="Send">
+          </div>
+          </div>
+          <!-- end card body -->
+          </div>  
             
-                </div>
-                <div class="col-6">
-                    <div class="mb-3">
-                      <label class="mb-1 fw-medium" id="messageLabel">Message:</label><br/>
-                      <textarea name="message" id="messageBox" rows="7" cols="81"></textarea>
-                      <span class="fw-medium fs-6" id="messageNotes">Add any notes here.</span>
-                    </div>  
-                
-                </div>
-            </div>
-
+           
             
              
             
@@ -152,13 +167,7 @@
             
            
         </form>
-        <div class="row" id="submitButton1">
-          <div class="card-footer" id="submitButton">
-            <!-- submit/cancel button -->
-            <button type="button" class="btn btn-secondary">Cancel</button>
-            <input class="btn btn-primary me-2" type="submit" value="Send">
-        </div>
-        </div>
+       
       </div>
 
         
